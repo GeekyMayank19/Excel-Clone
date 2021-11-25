@@ -16,13 +16,15 @@ for(let i = 0 ;i<26;i++){
     leftcorner.appendChild(row);
 }
 
-for(let i=1;i<=100;i++){
+for(let i=0;i<100;i++){
 let cellRow = document.createElement("div");
 cellRow.setAttribute("class","cell-row");
-for(let j=1;j<=26;j++){
+for(let j=0;j<26;j++){
     let cell = document.createElement("div");
     cell.setAttribute("class","cell");
-    // set attribute for cell idntification
+    //remove red line of text 
+    cell.setAttribute("spellcheck","false")
+    // set attribute for cell and storage idntification
     cell.setAttribute("rid",i);
     cell.setAttribute("cid",j);
     // cell.textContent = i+","+j;
@@ -39,9 +41,13 @@ function displayCellAddress(cell , i, j){
 
     cell.addEventListener("click",(e)=>{
         let rowId = i+1;
-        let colId = String.fromCharCode(64+j);
+        let colId = String.fromCharCode(65+j);
         addresBar.value =  `${colId}${rowId}`
     })
     
 
 }
+
+// by default click on first cell
+let firstCell = document.querySelector(".cell");
+firstCell.click();

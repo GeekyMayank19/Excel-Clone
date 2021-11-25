@@ -35,6 +35,10 @@ body{
     border-radius: 2px;
     outline: none;
 }
+
+.cell-prosps-action-cont{
+    cursor: pointer;
+}
 .font-family-props{
     padding: 2px;
 }
@@ -162,6 +166,7 @@ body{
     border-left: none;
     border-top: none;
     outline: none;
+    /* font-weight: normal; */
 }
 .cell-grid{
     height: calc(100vh - 140px  );
