@@ -25,10 +25,10 @@
       <span class="material-icons"> content_cut </span>
       <span class="material-icons"> content_paste </span>
       <select class="font-family-props">
-        <option value="">Monospace</option>
-        <option value="">Sans-Serif</option>
-        <option value="">Fantasy</option>
-        <option value="">Cursive</option>
+        <option value="monospace">Monospace</option>
+        <option value="sans-serif">Sans-Serif</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="cursive">Cursive</option>
       </select>
       <select class="font-size-props">
         <option value="14">14</option>
@@ -42,14 +42,23 @@
       <span class="material-icons alingment"> format_align_left </span>
       <span class="material-icons alingment"> format_align_center </span>
       <span class="material-icons alingment"> format_align_right </span>
-      <div class="color-prop">
+      <!-- <div class="color-prop">
         <span class="material-icons font-color"> format_color_text </span>
         <input type="color" />
       </div>
       <div class="color-prop">
         <span class="material-icons bg-color"> format_color_fill </span>
         <input type="color" />
+      </div> -->
+      <div class="color-prop">
+        <span class="material-icons"> format_color_text </span>
+        <input type="color" class="font-color-prop" />
       </div>
+      <div class="color-prop">
+        <span class="material-icons"> format_color_fill </span>
+        <input type="color" class="BGcolor-prop" />
+      </div>
+      
     </div>
     <div class="formula-action-cont">
       <input type="text" readonly class="address-bar" />

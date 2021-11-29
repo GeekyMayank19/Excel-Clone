@@ -24,18 +24,20 @@ let italic = document.querySelector(".italic");
 let underline = document.querySelector(".underline");
 let fontSize = document.querySelector(".font-size-props");
 let fontFamily = document.querySelector(".font-family-props");
-let fontColor = document.querySelector(".font-color");
-let BgColor = document.querySelector(".bg-color");
+let fontColor = document.querySelector(".font-color-prop");
+let BgColor = document.querySelector(".BGcolor-prop");
 let alligment = document.querySelector(".alingment");;
 let leftAling = alligment[0];
 let rightAling = alligment[1];
 let centerAling = alligment[2];
+
 
 // let addresBar = document.querySelector(".address-bar");
 let activeColorProp = "#d1d8e0";
 let inactiveColorProp = "#F1F1F1";
 // Attach propeties listner
 // application of two-way binding
+// 1 -> bold icon
 bold.addEventListener("click",(e) =>{
     let address = addresBar.value;
     let [cell,cellProp] =  getActiveCell(address);
@@ -47,6 +49,7 @@ bold.addEventListener("click",(e) =>{
     bold.style.backgroundColor = cellProp.bold ? activeColorProp : inactiveColorProp; 
 })
 
+// 2-> italic font
 italic.addEventListener("click",(e) =>{
     let address = addresBar.value;
     let [cell,cellProp] =  getActiveCell(address);
@@ -58,6 +61,7 @@ italic.addEventListener("click",(e) =>{
     italic.style.backgroundColor = cellProp.italic ? activeColorProp : inactiveColorProp; 
 })
 
+// 3-> underline
 underline.addEventListener("click",(e) =>{
     let address = addresBar.value;
     let [cell,cellProp] =  getActiveCell(address);
@@ -69,10 +73,10 @@ underline.addEventListener("click",(e) =>{
     underline.style.backgroundColor = cellProp.underline ? activeColorProp : inactiveColorProp; 
 })
 
+// 4-> font size
 fontSize.addEventListener("change",(e)=>{
     let address = addresBar.value;
     let [cell,cellProp] =  getActiveCell(address);
-    console.log(fontSize.value);
     // fontSize.value means value uthaya h front end se 
     // value of current ui after changed by user
     cellProp.fontSize = fontSize.value; // data change
@@ -80,7 +84,39 @@ fontSize.addEventListener("change",(e)=>{
     fontSize.value = cellProp.fontSize;
 })
 
+// 5-> font family
+fontFamily.addEventListener("change",(e)=>{
+    let address = addresBar.value;
+    let [cell,cellProp] =  getActiveCell(address);
 
+    cellProp.fontFamily = fontFamily.value; // data change
+    cell.style.fontFamily = cellProp.fontFamily // ui change
+    fontFamily.value = cellProp.fontFamily;
+})
+
+
+// 6-> font color
+fontColor.addEventListener("change",(e)=>{
+    let address = addresBar.value;
+    let [cell,cellProp] =  getActiveCell(address);
+
+    cellProp.fontColor = fontColor.value; // data change
+    cell.style.color  = cellProp.fontColor // ui change
+    fontColor.value = cellProp.fontColor;
+})
+
+// 7-> background color
+BgColor.addEventListener("change",(e)=>{
+    let address = addresBar.value;
+    let [cell,cellProp] =  getActiveCell(address);
+
+    cellProp.BgColor = BgColor.value; // data change
+    console.log(cellProp.BgColor);
+    cell.style.backgroundColor  = cellProp.BgColor // ui change
+    BgColor.value = cellProp.BgColor;
+})
+
+////////
 function getActiveCell(address){
    let [rid,cid] = decodeRidCidFromAddress(address);
    // Access cell and storage object
