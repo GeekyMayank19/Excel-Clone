@@ -39,9 +39,9 @@
       <span class="material-icons bold"> format_bold </span>
       <span class="material-icons italic"> format_italic </span>
       <span class="material-icons underline"> format_underlined </span>
-      <span class="material-icons alingment"> format_align_left </span>
-      <span class="material-icons alingment"> format_align_center </span>
-      <span class="material-icons alingment"> format_align_right </span>
+      <span class="left material-icons alignment"> format_align_left </span>
+      <span class="center material-icons alignment"> format_align_center </span>
+      <span class="right material-icons alignment"> format_align_right </span>
       <!-- <div class="color-prop">
         <span class="material-icons font-color"> format_color_text </span>
         <input type="color" />
@@ -58,7 +58,6 @@
         <span class="material-icons"> format_color_fill </span>
         <input type="color" class="BGcolor-prop" />
       </div>
-      
     </div>
     <div class="formula-action-cont">
       <input type="text" readonly class="address-bar" />
@@ -66,13 +65,22 @@
       <input type="text" class="formula-bar" />
     </div>
 
-    <div class="grid">
+
+    <div class="grid-cont">
+      <div class="top-left-dummy-box"></div>
+      <div class="address-col-cont"></div>
+      <div class="cells-cont">
+          <div class="address-row-cont"></div>
+      </div>
+  </div>
+
+    <!-- <div class="grid">
       <div class="grid-cont">
         <div class="left-corner"></div>
         <div class="cell-grid"></div>
         <div class="corner"></div>
       </div>
-    </div>
+    </div> -->
 
     <div class="sheet-cont">
       <div class="sheet-add-icon">
@@ -85,6 +93,7 @@
       </div>
     </div>
   </body>
-  <script src="./script.js"></script>
+  <!-- <script src="./script.js"></script> -->
+  <script src="./grid.js"></script>
   <script src="./cell-propeties.js"></script>
 </html>
